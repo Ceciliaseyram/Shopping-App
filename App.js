@@ -1,14 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import {createStackNavigator}from '@react-navigation/stack'
 import Login from "./screens/Login";
 import Home from "./screens/Home";
+import Welcome from "./screens/Welcome";
 
 export default function App() {
+  const MainNavigator = createStackNavigator();
+  
   return (
     <View style={{flex: 1, }}>
-      <Text>Welcome to Classic Collections</Text>
-      <StatusBar style="auto" />
+      <NavigationContainer>
+        <MainNavigator.Navigator 
+        screenOptions={{headerShown: false}} 
+        initialRouteName="Welcome">
+          <MainNavigator.Screen name="Home" component={Home} />
+          <MainNavigator.Screen name="Login" component={Login} />
+          <MainNavigator.Screen name="Welcome" component={Welcome} />
+        </MainNavigator.Navigator>
+      </NavigationContainer>
+
     </View>
   );
 }
