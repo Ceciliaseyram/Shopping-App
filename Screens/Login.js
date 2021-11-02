@@ -1,26 +1,113 @@
 import React from "react";
 import { View, Text, ImageBackground, StyleSheet, TextInput, TouchableOpacity } from "react-native";
+import { Ionicons, FontAwesome, AntDesign } from "@expo/vector-icons";
 
-export default function Login() {
+
+export default function Login({navigation}) {
     
     return <View style={{flex: 1}} >
         <ImageBackground
         style={styles.img}
         source={{uri:
-            "https://images.unsplash.com/photo-1562157873-818bc0726f68?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2xvdGhlc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            "https://media.istockphoto.com/photos/dressing-room-with-shelves-and-lighting-equipment-picture-id1271772825?b=1&k=20&m=1271772825&s=170667a&w=0&h=2U_adk6D5EELwSgRM14FzLFmQRfOLYOGhImvk4TuyG0="
         }}>
 
             <View style={{alignItems: 'center'}}>
                 <Text style={{color: "grey", fontSize: 50,  textAlignHorizontal: "top"}}> Login Page</Text>
             </View>
 
-                <View style={{alignItems: "center", padding: 10, position: "absolute",  top:190, right:235 }}>
+                <View style={{alignItems: "center", padding: 10, position: "absolute",  top:190, left: 628}}>
                    <TextInput
-                      style={{height: 40, backgroundColor:"azure", fontSize: 25, fontStyle:"italic" }}
-                      placeholder= "Username" 
+                      style={{height: 40, backgroundColor:"azure", fontSize: 25, fontStyle:"italic", padding: 10, borderRadius: 10 }}
+                      placeholder= "username/email" 
                    />
                 </View>
-           
+                <View style={{ alignItems: "center", padding: 10, position: "absolute",  top:250, left: 628}}>
+                   
+                   <TextInput
+                      style={{height: 40, backgroundColor:"azure", fontSize: 25, fontStyle:"italic",  padding: 10, borderRadius: 10 }}
+                      placeholder= "password" 
+                      secureTextEntry="true"
+                   />
+                </View>
+                <TouchableOpacity 
+                 onPress={() => {
+                    navigation.navigate("Home")
+                }}
+                style={{
+                    
+                    backgroundColor: "grey",
+                    padding: 15,
+                    borderRadius: 10,
+                    flexDirection: "row",
+                    alignItems: "center",
+                    position: "absolute",
+                    top: 350,
+                    left: 712,
+                }}>
+                    <Text style={{fontSize: 30, color: "white"}}>Login</Text>
+                </TouchableOpacity>
+                <View>
+                <TouchableOpacity 
+                onPress={() => {
+                    navigation.navigate("Home")
+                }}
+                style={{
+            backgroundColor: "black", 
+            padding: 10, 
+            paddingHorizontal: 60,
+            borderRadius: 10, 
+            flexDirection: "row",
+            alignItems: "center",
+            position: "absolute",
+            marginTop: 20,
+            top:400,
+            left: 628,
+            }}
+        >
+              <AntDesign name="google" size={24} color="rgb(256,100,10)" />
+            <Text style={{ color: "white", fontSize: 17, marginLeft: 15}}>Login with Gmail</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+        onPress={() => {
+            navigation.navigate("Home")
+        }}
+        style={{
+            backgroundColor: "black", 
+            padding: 10, 
+            paddingHorizontal: 60,
+            borderRadius: 10, 
+            flexDirection: "row",
+            alignItems: "center",
+            position: "absolute",
+            marginTop: 20,
+            top:450,
+            left: 628,
+        }}
+       
+        >
+            <AntDesign name="apple1" size={24} color="white" />
+            <Text style={{fontSize: 17, color: "white", marginLeft: 15,}}>Login with Apple</Text>
+
+        </TouchableOpacity>
+
+
+
+                </View>
+                
+           <TouchableOpacity
+           style={{
+            position: "absolute",
+            top:600,
+            left: 700,
+           }}
+           >
+
+        <Text style={{marginTop: 10, fontWeight: 500, color: "white"}}>Not a member? 
+        <Text style={{color: "skyblue", fontWeight: "bold", }}>Signup</Text>
+        </Text>
+        </TouchableOpacity>
             
         </ImageBackground>
     </View>
