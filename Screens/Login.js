@@ -9,7 +9,7 @@ export default function Login({navigation}) {
         <ImageBackground
         style={styles.img}
         source={{uri:
-            "https://media.istockphoto.com/photos/dressing-room-with-shelves-and-lighting-equipment-picture-id1271772825?b=1&k=20&m=1271772825&s=170667a&w=0&h=2U_adk6D5EELwSgRM14FzLFmQRfOLYOGhImvk4TuyG0="
+            "https://4kwallpapers.com/images/walls/thumbs_2t/6652.jpg"
         }}>
 
             <View style={{alignItems: 'center'}}>

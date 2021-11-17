@@ -8,7 +8,7 @@ export default function Welcome({navigation}) {
         <ImageBackground
         style={styles.img}
         source={{uri:
-            "https://media.istockphoto.com/photos/abstract-gold-award-background-picture-id1321202914?b=1&k=20&m=1321202914&s=170667a&w=0&h=BZNEZJrEBcfjG7iMo92VGSwJTK-K1KRkwLtmU-_u_uM="
+            "https://images.unsplash.com/photo-1617791160588-241658c0f566?ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NXxPM0d6blY0anZwUXx8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
         }}>
 
             <View style={{flex: 1, justifyContent: "center", alignItems: "center" }}>
