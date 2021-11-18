@@ -5,6 +5,8 @@ import {createStackNavigator}from '@react-navigation/stack'
 import Login from "./screens/Login";
 import Home from "./screens/Home";
 import Welcome from "./screens/Welcome";
+import Cart from "./screens/Cart";
+import Signup from "./Screens/Signup";
 
 export default function App() {
   const MainNavigator = createStackNavigator();
@@ -18,6 +20,8 @@ export default function App() {
           <MainNavigator.Screen name="Home" component={Home} />
           <MainNavigator.Screen name="Login" component={Login} />
           <MainNavigator.Screen name="Welcome" component={Welcome} />
+          <MainNavigator.Screen name="Cart" component={Cart} />
+          <MainNavigator.Screen name="Signup" component={Signup} />
         </MainNavigator.Navigator>
       </NavigationContainer>
 

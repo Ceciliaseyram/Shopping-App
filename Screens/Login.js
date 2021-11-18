@@ -97,6 +97,9 @@ export default function Login({navigation}) {
                 </View>
                 
            <TouchableOpacity
+           onPress={() => {
+            navigation.navigate("Signup")
+        }}
            style={{
             position: "absolute",
             top:600,
